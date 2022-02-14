@@ -7,10 +7,8 @@ function GamesContainer({gameList}) {
 
 
   return (
-    <div>
-        GamesContainer
+    <div className="row">
         {gameList.map(game => <Game key={game.id} game={game} />)}
-
     </div>
   )
 }

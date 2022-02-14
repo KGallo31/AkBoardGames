@@ -5,21 +5,17 @@ import CommentContainer from './CommentContainer'
 function Game({game}) {
   return (
     // <Card>
-    <div>
-        <div className='image'>
+    <div id="container" className="column">
+        <div className='product-image'>
             <img src={game.imgUrl}/>
         </div>
         <div className='content'>
-            <div className='name'>
-                {game.name}
+            <div className='product-details'>
+               <h1>{game.name}</h1>
             </div>
-            <div className='players'>
-                {game.playersMin} - {game.playersMax}
-            </div>
-            <div className='description'>
-                <p>
-                    {game.description}
-                </p>
+            <div className='product.details'>
+            <h2>{game.playersMin} - {game.playersMax}</h2>
+                {game.description}
             </div>
         </div>
         <CommentContainer />
