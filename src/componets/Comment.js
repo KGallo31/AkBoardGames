@@ -1,9 +1,22 @@
 import React from 'react'
+import { Card } from "semantic-ui-react";
 
 
-function Comment() {
+function Comment({comment}) {
+
+  const meta = `Reviewed ${comment.game}`
+  const extra = `${comment.rating} out of 5`
+
   return (
-    <div>Comment</div>
+    <div>
+      <Card 
+      // onClick={}
+      header={comment.name}
+      meta={extra}
+      extra={meta}
+      description={comment.review}
+      />
+    </div>
   )
 }
 

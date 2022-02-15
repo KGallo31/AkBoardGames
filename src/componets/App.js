@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from "react";
 import Header from "./Header";
 import GamesContainer from "./GamesContainer";
-
+import CommentContainer from './CommentContainer'
 
 function App() {
 
@@ -11,18 +11,16 @@ function App() {
 
   const [gameList,setGameList] = useState([])
 
+  const [comments, setComments] = useState([])
 
 
-  useEffect(() => {
+    useEffect(() => {
     fetch('http://localhost:3000/games').then(r => r.json()).then(setGameList)
+    fetch('http://localhost:3000/comments').then(r => r.json()).then(setComments)
   },[])
 
 
-
-
   const shownGames = [...gameList]
-
-
 
   const changeSearchByNumPlayer = () => {
     setSearchByNumPlayer(!searchByNumPlayer)
@@ -56,7 +54,7 @@ function App() {
     <div>
       <Header changeSearchBy={changeSearchBy} changeSearchByNumPlayer={changeSearchByNumPlayer}/>
       <GamesContainer gameList={newArr} />
-
+      <CommentContainer comments={comments}/>
     </div>
   )
 }

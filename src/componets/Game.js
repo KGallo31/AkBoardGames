@@ -1,10 +1,11 @@
 import React from 'react'
-import CommentContainer from './CommentContainer'
-import { Card,Button} from "semantic-ui-react";
+import { Card, Button} from "semantic-ui-react";
 
 function Game({game}) {
+
   const players = `${game.playersMin} - ${game.playersMax} Players`
   const extra = <Button >Show Reviews</Button>
+
   return (
     <Card 
     // onClick={}

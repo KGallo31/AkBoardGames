@@ -180,5 +180,50 @@
         "imgUrl": "https://cf.geekdo-images.com/x3zxjr-Vw5iU4yDPg70Jgw__imagepage/img/-17KkOmxbTu2slJTabGrkO8ZW8s=/fit-in/900x600/filters:no_upscale():strip_icc()/pic3490053.jpg",
         "description": "Brass: Birmingham is an economic strategy game sequel to Martin Wallace' 2007 masterpiece, Brass. Brass: Birmingham tells the story of competing entrepreneurs in Birmingham during the industrial revolution, between the years of 1770-1870. As in its predecessor, you must develop, build, and establish your industries and network, in an effort to exploit low or high market demands."
       }
-    ]
+    ],
+
+  "comments": [
+    {
+      "id": 1,
+      "name": "Max",
+      "game": "Splendor",
+      "rating": 5,
+      "review": "The game is great. Super fun, interesting and loads of replayability. Works well from 2 to 5 players, and there are even variants for solo play. BUT it's a bit overpriced for the components it has and the box could be much smaller. Would be nice to have a cheaper pocket version, for less than £15. Mark this comment as useful so that the manufacturer listens to the comments and brings a cheaper and more compact version."
+    },
+    {
+      "id": 2,
+      "name": "Ralph",
+      "game": "Wingspan",
+      "rating": 4,
+      "review": "This is an amazing fun game to play with 1-5 people. I wanted to get it for my wife because she is an avid birder. At first, she was overwhelmed trying to figure out how to play the game using the instructions that came with the game. She tossed the papers at me and said I should figure it out. I fired up YouTube on the smart TV, and we watched a couple of videos on how to play Wingspan. 30 minutes later we were in the middle of first game! The quality of this board game and it's components is the best. The only thing that could be slightly improved is the storage for the bird food and eggs. However, I've already 3D printed a solution from Thingiverse that solves that minor issue. Even if you're not into birds, you'll still enjoy this game. It doesn't take long to play a game - about and hour for a game with 5 people. 20-30 minutes for 2 players. Coming up with different strategies to win is where we are at now with the game!"
+    },
+    {
+      "id": 3,
+      "name": "Joey",
+      "game": "Splendor",
+      "rating": 1,
+      "review": "We all know this is a great game. However, this review is for the quality of the actual game pieces. The four corners of the box all have damages, and 1 damaged yellow piece and 1 green piece without stickers on both side."
+    },
+    {
+      "id": 4,
+      "name": "Kate",
+      "game": "Sushi Go",
+      "rating": 5,
+      "review": "What a fun game this is. I play with my 7 year old granddaughter, her parents and sometimes a friend of hers. It is fast and fun. I picked up this game for two reasons. 1: my granddaughter and her parents love sushi. 2: it was recommended as a very fun game. The goal of the game is to to achieve the highest score. Each person gets a number of cards depending upon the number of people playing. 2-5 people can play, but with two people it is not as much fun. Each card has a score number, you play 3 rounds and then add up your score from each game. The game is simple to play,play a few hands to pick up the fun of it. In our family we play this 2-3 times a week. On vacations it's a fun game for everyone. The game is not expensive, and if you like playing games, you will really like this one."
+    },
+    {
+      "id": 5,
+      "name": "Monique",
+      "game": "Dragonwood",
+      "rating": 5,
+      "review": "We have had Sleeping Queens for a while and the whole family loves it. This is a great step up for a family wanting a slightly more involved game. Easy to learn and understand, and it comes with two reference cards to remind you of your play options each turn which was helpful for the kids. My 6 and 9 year old both loved it!"
+    },
+    {
+      "id": 6,
+      "name": "Harrison",
+      "game": "Dragonwood",
+      "rating": 3,
+      "review": "Game is fun. I don't like playing with the enhancements, at least in a two player game. Certain enhancements make it hard for an opponent without enhancements to compete, so the winner of the game can often be predicted early on in the game. E.g. if your opponent has +2 to every attack, that becomes a significant impairment for you, as the opponent can capture all one point cards with one adventurer card (without even rolling). One solution is to pull the enhancement cards out of the deck before starting. I found a similar game by Gamewright, Trash Pandas, to be more fun, easier to teach/understand, and game play seemed to remain on a more level playing field than Dragonwood. The price is right for the game, though, so it's worth adding to your collection."
+    }
+  ]
 }
