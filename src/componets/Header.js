@@ -5,9 +5,10 @@ function Header({changeSearchBy,changeSearchByNumPlayer}) {
   return (
     <div>
         <h1>
-            Header
+          <img src='https://res.cloudinary.com/april-skrine/image/upload/v1644941070/aklogo.jpg'/>
         </h1>
         <Filter changeSearchBy={changeSearchBy} changeSearchByNumPlayer={changeSearchByNumPlayer}/>
+        <hr/>
     </div>
   )
 }

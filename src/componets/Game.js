@@ -1,26 +1,19 @@
 import React from 'react'
 import CommentContainer from './CommentContainer'
-// import { Card } from "semantic-ui-react";
+import { Card,Button} from "semantic-ui-react";
 
 function Game({game}) {
+  const players = `${game.playersMin} - ${game.playersMax} Players`
+  const extra = <Button >Show Reviews</Button>
   return (
-    // <Card>
-    <div id="container" className="column">
-        <div className='product-image'>
-            <img src={game.imgUrl}/>
-        </div>
-        <div className='content'>
-            <div className='product-details'>
-               <h1>{game.name}</h1>
-            </div>
-            <div className='product.details'>
-            <h2>{game.playersMin} - {game.playersMax}</h2>
-                {game.description}
-            </div>
-        </div>
-        <CommentContainer />
-    </div>
-    // </Card>
+    <Card 
+    // onClick={}
+    image={game.imgUrl}
+    header={game.name}
+    meta={players}
+    description={game.description}
+    extra={extra}
+    />
   )
 }
 

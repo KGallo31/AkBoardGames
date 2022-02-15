@@ -6,7 +6,7 @@ import GamesContainer from "./GamesContainer";
 function App() {
 
   const [searchByName,setSearchByName] = useState('')
-  
+
   const [searchByNumPlayer,setSearchByNumPlayer] = useState(true)
 
   const [gameList,setGameList] = useState([])

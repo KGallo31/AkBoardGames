@@ -1,12 +1,11 @@
 import React from 'react'
+import { Button,Input } from 'semantic-ui-react'
 
 function Filter({changeSearchBy,changeSearchByNumPlayer}) {
   return (
     <div>
-        <p>
-            <input onChange={changeSearchBy} type={'text'}/>
-            <button onClick={changeSearchByNumPlayer}>Sort By Minimum Number Of Players</button>
-        </p>
+      <Input icon={'search'} onChange={changeSearchBy} type={'text'}/>
+      <Button onClick={changeSearchByNumPlayer}>Sort By Minimum Number Of Players</Button>
     </div>
   )
 }
