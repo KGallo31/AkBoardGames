@@ -2,6 +2,7 @@ import React,{useState,useEffect} from "react";
 import Header from "./Header";
 import GamesContainer from "./GamesContainer";
 import CommentContainer from './CommentContainer'
+import {Route,Switch} from 'react-router-dom'
 
 function App() {
 
@@ -37,6 +38,18 @@ function App() {
   }
 
 
+  const addReview = (newReview) => {
+    fetch('http://localhost:3000/comments',{
+      method:'POST',
+      headers:{"Content-Type": "application/json"},
+      body: JSON.stringify(newReview)
+    })
+    const newComment = [...comments,newReview]
+    setComments(newComment)
+  }
+
+
+
 
   const changeSearchBy = (e) => {
     setSearchByName(e.target.value)
@@ -52,9 +65,15 @@ function App() {
 
   return (
     <div>
-      <Header changeSearchBy={changeSearchBy} changeSearchByNumPlayer={changeSearchByNumPlayer}/>
-      <GamesContainer gameList={newArr} />
-      <CommentContainer comments={comments}/>
+      <Header  />
+      <Switch>
+        <Route exact path='/'>
+          <GamesContainer  changeSearchBy={changeSearchBy} changeSearchByNumPlayer={changeSearchByNumPlayer} gameList={newArr} />
+        </Route>
+        <Route path='/reviews'>
+          <CommentContainer comments={comments} addReview={addReview}/>
+        </Route>
+      </Switch>
     </div>
   )
 }
