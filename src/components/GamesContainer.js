@@ -9,11 +9,11 @@ const Space = styled.p`
   margin-bottom:20px
 `;
 
-function GamesContainer({gameList,changeSearchBy,changeSearchByNumPlayer, changeFilteredReviews}) {
+function GamesContainer({changeSortAlphabetical,gameList,changeSearchBy,changeSearchByNumPlayer, changeFilteredReviews}) {
 
   return (
     <div class="ui center aligned container">
-    <Filter changeSearchBy={changeSearchBy} changeSearchByNumPlayer={changeSearchByNumPlayer}/>
+    <Filter changeSearchBy={changeSearchBy} changeSearchByNumPlayer={changeSearchByNumPlayer} changeSortAlphabetical={changeSortAlphabetical}/>
         <Space></Space>
         {/* <hr style={{size:"10", color:"black"}}/> */}
         <Space></Space>

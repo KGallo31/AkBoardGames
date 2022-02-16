@@ -13,6 +13,8 @@ function App() {
 
   const [gameList,setGameList] = useState([])
 
+  const [sortAlphabetical,setSortAlphabetical] = useState(true)
+
   const [reviews, setReviews] = useState([])
 
   const [selectedGame, setSelectedGame] = useState('')
@@ -25,6 +27,26 @@ function App() {
 
 
   const shownGames = [...gameList]
+
+
+
+  const changeSortAlphabetical = () => {
+    setSearchByNumPlayer(!searchByNumPlayer)
+    if(searchByNumPlayer){
+      console.log('hi')
+      shownGames.sort(function(a, b){
+        if(a.name < b.name) { return -1; }
+        if(a.name > b.name) { return 1; }
+        return 0;
+      })
+    }else{
+      shownGames.sort((a,b) => {
+        return a.id - b.id
+      })
+    }
+    setGameList(shownGames)
+  }
+
 
   const changeSearchByNumPlayer = () => {
     setSearchByNumPlayer(!searchByNumPlayer)
@@ -82,7 +104,7 @@ function App() {
       </div>
       <Switch>
         <Route exact path='/'>
-          <GamesContainer  changeSearchBy={changeSearchBy} changeSearchByNumPlayer={changeSearchByNumPlayer} gameList={newArr} changeFilteredReviews={changeFilteredReviews}/>
+          <GamesContainer changeSortAlphabetical={changeSortAlphabetical}  changeSearchBy={changeSearchBy} changeSearchByNumPlayer={changeSearchByNumPlayer} gameList={newArr} changeFilteredReviews={changeFilteredReviews}/>
         </Route>
         <Route path='/reviews'>
           <ReviewContainer reviews={newReviewArray} />
