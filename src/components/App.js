@@ -1,7 +1,8 @@
 import React,{useState,useEffect} from "react";
 import Header from "./Header";
 import GamesContainer from "./GamesContainer";
-import CommentContainer from './CommentContainer'
+import ReviewContainer from './ReviewContainer'
+import AddReview from './AddReview'
 import {Route,Switch} from 'react-router-dom'
 
 function App() {
@@ -12,12 +13,14 @@ function App() {
 
   const [gameList,setGameList] = useState([])
 
-  const [comments, setComments] = useState([])
+  const [reviews, setReviews] = useState([])
+
+  const [selectedGame, setSelectedGame] = useState('')
 
 
     useEffect(() => {
     fetch('http://localhost:3000/games').then(r => r.json()).then(setGameList)
-    fetch('http://localhost:3000/comments').then(r => r.json()).then(setComments)
+    fetch('http://localhost:3000/reviews').then(r => r.json()).then(setReviews)
   },[])
 
 
@@ -38,14 +41,23 @@ function App() {
   }
 
 
+  const changeFilteredReviews = (gameName) => {
+    setSelectedGame(gameName)
+  }
+
+  const newReviewArray = reviews.filter((review) => {
+    return review.game === selectedGame
+  })
+
+
   const addReview = (newReview) => {
-    fetch('http://localhost:3000/comments',{
+    fetch('http://localhost:3000/reviews',{
       method:'POST',
       headers:{"Content-Type": "application/json"},
       body: JSON.stringify(newReview)
     })
-    const newComment = [...comments,newReview]
-    setComments(newComment)
+    const newestReview = [...reviews, newReview]
+    setReviews(newestReview)
   }
 
 
@@ -68,10 +80,13 @@ function App() {
       <Header  />
       <Switch>
         <Route exact path='/'>
-          <GamesContainer  changeSearchBy={changeSearchBy} changeSearchByNumPlayer={changeSearchByNumPlayer} gameList={newArr} />
+          <GamesContainer  changeSearchBy={changeSearchBy} changeSearchByNumPlayer={changeSearchByNumPlayer} gameList={newArr} changeFilteredReviews={changeFilteredReviews}/>
         </Route>
         <Route path='/reviews'>
-          <CommentContainer comments={comments} addReview={addReview}/>
+          <ReviewContainer reviews={newReviewArray} />
+        </Route>
+        <Route path='/add-review'>
+          <AddReview addReview={addReview}/>
         </Route>
       </Switch>
     </div>

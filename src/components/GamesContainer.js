@@ -9,7 +9,7 @@ const Space = styled.p`
   margin-bottom:20px
 `;
 
-function GamesContainer({gameList,changeSearchBy,changeSearchByNumPlayer}) {
+function GamesContainer({gameList,changeSearchBy,changeSearchByNumPlayer, changeFilteredReviews}) {
 
   return (
     <div class="ui center aligned container">
@@ -19,7 +19,7 @@ function GamesContainer({gameList,changeSearchBy,changeSearchByNumPlayer}) {
         <Space></Space>
         <Space></Space>
     <Card.Group itemsPerRow={5}>
-      {gameList.map(game => <Game key={game.id} game={game} />)}
+      {gameList.map(game => <Game key={game.id} game={game} changeFilteredReviews={changeFilteredReviews}/>)}
     </Card.Group>
     </div>
   )
