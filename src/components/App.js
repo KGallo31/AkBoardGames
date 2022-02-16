@@ -76,8 +76,10 @@ function App() {
 
 
   return (
-    <div>
-      <Header  />
+    <div class="bg">
+      <div class="header">
+        <Header  />
+      </div>
       <Switch>
         <Route exact path='/'>
           <GamesContainer  changeSearchBy={changeSearchBy} changeSearchByNumPlayer={changeSearchByNumPlayer} gameList={newArr} changeFilteredReviews={changeFilteredReviews}/>

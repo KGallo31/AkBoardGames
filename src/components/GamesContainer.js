@@ -15,7 +15,7 @@ function GamesContainer({gameList,changeSearchBy,changeSearchByNumPlayer, change
     <div class="ui center aligned container">
     <Filter changeSearchBy={changeSearchBy} changeSearchByNumPlayer={changeSearchByNumPlayer}/>
         <Space></Space>
-        <hr/>
+        {/* <hr style={{size:"10", color:"black"}}/> */}
         <Space></Space>
         <Space></Space>
     <Card.Group itemsPerRow={5}>
