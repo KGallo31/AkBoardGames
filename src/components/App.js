@@ -21,6 +21,8 @@ function App() {
 
   const [selectedGame, setSelectedGame] = useState('')
 
+  const [reviewState, setReviewState] = useState(true)
+
 
     useEffect(() => {
     fetch(gameAPI).then(r => r.json()).then(setGameList)
@@ -30,7 +32,14 @@ function App() {
 
   const shownGames = [...gameList]
 
-
+  const changeReviewState = () => {
+    if(selectedGame !== ''){
+      setReviewState(false)
+    }
+    else{
+      setReviewState(true)
+    }
+  }
 
   const changeSortAlphabetical = () => {
     setSearchByNumPlayer(!searchByNumPlayer)
@@ -115,7 +124,7 @@ function App() {
   return (
     <div className="bg">
       <div className="header">
-        <Header  />
+        <Header changeReviewState={changeReviewState}/>
       </div>
       <Switch>
         <Route exact path='/'>
@@ -126,10 +135,16 @@ function App() {
             gameList={newArr} 
             changeFilteredReviews={changeFilteredReviews}
             addNewGame={addNewGame}
+            changeReviewState={changeReviewState}
           />
         </Route>
         <Route path='/reviews'>
-          <ReviewContainer deleteReview={deleteReview} reviews={newReviewArray} />
+          <ReviewContainer 
+            deleteReview={deleteReview} 
+            filteredReviews={newReviewArray} 
+            allReviews={reviews}
+            reviewState={reviewState}
+          />
         </Route>
         <Route path='/add-review'>
           <AddReview addReview={addReview}/>

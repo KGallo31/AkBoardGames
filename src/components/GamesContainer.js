@@ -10,7 +10,7 @@ const Space = styled.p`
   margin-bottom:20px
 `;
 
-function GamesContainer({changeSortAlphabetical,gameList,changeSearchBy,changeSearchByNumPlayer, changeFilteredReviews, addNewGame}) {
+function GamesContainer({changeSortAlphabetical,gameList,changeSearchBy,changeSearchByNumPlayer, changeFilteredReviews, changeReviewState}) {
 
   return (
     <div className="ui center aligned container">
@@ -19,7 +19,7 @@ function GamesContainer({changeSortAlphabetical,gameList,changeSearchBy,changeSe
         <Space></Space>
         <Space></Space>
       <Card.Group itemsPerRow={5}>
-        {gameList.map(game => <Game key={game.id} game={game} changeFilteredReviews={changeFilteredReviews}/>)}
+        {gameList.map(game => <Game key={game.id} game={game} changeFilteredReviews={changeFilteredReviews} changeReviewState={changeReviewState}/>)}
       </Card.Group>
       <Space></Space>
       <Link to={`/add-game`}><Button style={{border: '5px solid #C1BBDA', background:'white', color:'black', fontSize: '30px'}}>ADD A GAME</Button></Link>

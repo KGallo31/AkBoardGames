@@ -40,6 +40,11 @@ code {
   padding-right: 10px;
 }
 
+.border-review {
+  padding-right: 10px;
+  padding-bottom: 10px
+}
+
 .button-click {
   color: #C1BBDA !important;
   background: black !important;
