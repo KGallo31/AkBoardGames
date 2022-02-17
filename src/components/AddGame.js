@@ -30,33 +30,33 @@ function AddGame({addNewGame}) {
     }
 
     return(
-        <div class="ui center aligned container">
-            <form onSubmit={onSubmitGame} class="ui form">
-                <div class="field">
+        <div className="ui center aligned container">
+            <form onSubmit={onSubmitGame} className="ui form">
+                <div className="field">
                 <label>Name</label>
                 <input onChange={(e) => setGameName(e.target.value)} type="text" name="name" placeholder="Name"/>
                 </div>
-                <div class="field">
+                <div className="field">
                 <label>Game</label>
                 <input onChange={(e) => setPlayersMin(e.target.value)}  type="text" name="player-min" placeholder="Player Min"/>
                 </div>
-                <div class="field">
+                <div className="field">
                 <label>Rating</label>
                 <input onChange={(e) => setPlayersMax(e.target.value)} type="text" name="player-max" placeholder="Player Max"/>
                 </div>
-                <div class="field">
+                <div className="field">
                 <label>Review</label>
                 <input onChange={(e) => setPlayTime(e.target.value)} type="text" name="play-time" placeholder="Play Time"/>
                 </div>
-                <div class="field">
+                <div className="field">
                 <label>Review</label>
                 <input onChange={(e) => setGameImgUrl(e.target.value)} type="text" name="img" placeholder="Game Img URL"/>
                 </div>
-                <div class="field">
+                <div className="field">
                 <label>Review</label>
                 <input onChange={(e) => setGameDescription(e.target.value)} type="text" name="description" placeholder="Game Description"/>
                 </div>
-            <button class="ui button" type="submit">Submit</button>
+            <button className="ui button" type="submit">Submit</button>
             </form>
         <Space></Space>
         <Space></Space>

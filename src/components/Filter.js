@@ -18,7 +18,7 @@ function Filter({changeSearchBy,changeSearchByNumPlayer,changeSortAlphabetical})
   
 
   return (
-    <div class="ui huge icon input">
+    <div className="ui huge icon input">
       <div className="border"><Input icon={'search'} onChange={changeSearchBy} type={'text'}/></div>
       <div className="border">
         <Button className={toggle ? '' : 'button-click'}

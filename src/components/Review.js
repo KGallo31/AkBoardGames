@@ -1,21 +1,31 @@
 import React from 'react'
-import { Card } from "semantic-ui-react";
+import { Card, Button} from "semantic-ui-react";
 
 
-function Review({review}) {
+function Review({review,deleteReview}) {
 
-  const meta = `Reviewed ${review.game}`
-  const extra = `${review.rating} out of 5`
+  const extra = `Reviewed ${review.game}`
+  const meta = `${review.rating} out of 5`
+  const button = <Button>Button</Button>
 
   return (
     <div>
-      <Card 
-      // onClick={}
-      header={review.name}
-      meta={extra}
-      extra={meta}
-      description={review.review}
-      />
+      <Card>
+      <Card.Content>
+        <Card.Header>{review.name}</Card.Header>
+        <Card.Meta>{meta}
+        </Card.Meta>
+        <Card.Description>
+          {review.review}
+        </Card.Description>
+      </Card.Content>
+      <Card.Content extra>{extra}</Card.Content>
+          <Card.Content extra>
+          <Button onClick={() => deleteReview(review)} basic color='grey'>
+            🗑 
+          </Button>
+          </Card.Content>
+      </Card>
     </div>
   )
 }

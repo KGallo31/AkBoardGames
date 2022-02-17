@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 
 function Header() {
   return (
-    <div class="center">
+    <div className="center">
       <Link to={`/`}>
         <img src="https://res.cloudinary.com/april-skrine/image/upload/v1645034174/newlogo_1_wjqh1k.jpg" alt="logo"/>
       </Link>

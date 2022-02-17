@@ -13,7 +13,7 @@ const Space = styled.p`
 function GamesContainer({changeSortAlphabetical,gameList,changeSearchBy,changeSearchByNumPlayer, changeFilteredReviews, addNewGame}) {
 
   return (
-    <div class="ui center aligned container">
+    <div className="ui center aligned container">
       <Filter changeSearchBy={changeSearchBy} changeSearchByNumPlayer={changeSearchByNumPlayer} changeSortAlphabetical={changeSortAlphabetical}/>
         <Space></Space>
         <Space></Space>

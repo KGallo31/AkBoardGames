@@ -3,13 +3,13 @@ import Review from './Review'
 import { Card } from 'semantic-ui-react'
 
 
-function ReviewContainer({reviews}) {
+function ReviewContainer({reviews,deleteReview}) {
 
 
   return (
         <div>
           <Card.Group itemsPerRow={4}>
-            {reviews.map((review) => <Review review={review} key={review.id}/>)}
+            {reviews.map((review) => <Review deleteReview={deleteReview} review={review} key={review.id}/>)}
           </Card.Group>
         </div>
   )

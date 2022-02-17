@@ -6,6 +6,9 @@ import AddReview from './AddReview'
 import {Route,Switch} from 'react-router-dom'
 import AddGame from './AddGame'
 
+const reviewAPI = 'http://localhost:3000/reviews'
+const gameAPI = 'http://localhost:3000/games'
+
 function App() {
 
   const [searchByName,setSearchByName] = useState('')
@@ -22,8 +25,8 @@ function App() {
 
 
     useEffect(() => {
-    fetch('http://localhost:3000/games').then(r => r.json()).then(setGameList)
-    fetch('http://localhost:3000/reviews').then(r => r.json()).then(setReviews)
+    fetch(gameAPI).then(r => r.json()).then(setGameList)
+    fetch(reviewAPI).then(r => r.json()).then(setReviews)
   },[])
 
 
@@ -34,7 +37,6 @@ function App() {
   const changeSortAlphabetical = () => {
     setSearchByNumPlayer(!searchByNumPlayer)
     if(searchByNumPlayer){
-      console.log('hi')
       shownGames.sort(function(a, b){
         if(a.name < b.name) { return -1; }
         if(a.name > b.name) { return 1; }
@@ -74,7 +76,7 @@ function App() {
 
 
   const addReview = (newReview) => {
-    fetch('http://localhost:3000/reviews',{
+    fetch(reviewAPI,{
       method:'POST',
       headers:{"Content-Type": "application/json"},
       body: JSON.stringify(newReview)
@@ -84,7 +86,7 @@ function App() {
   }
 
   const addNewGame = (newGame) => {
-    fetch('http://localhost:3000/games',{
+    fetch(gameAPI,{
       method:'POST',
       headers:{"Content-Type": "application/json"},
       body: JSON.stringify(newGame)
@@ -98,6 +100,12 @@ function App() {
     setSearchByName(e.target.value)
   }
 
+  const deleteReview = (deletedReview) => {
+    const remainingReviews = reviews.filter(review => review.id !== deletedReview.id)
+    setReviews(remainingReviews)
+    fetch(`${reviewAPI}`,`/${deletedReview.id}`,{method:"DELETE"})
+  }
+
 
 
   const newArr = shownGames.filter(game => {
@@ -107,8 +115,8 @@ function App() {
 
 
   return (
-    <div class="bg">
-      <div class="header">
+    <div className="bg">
+      <div className="header">
         <Header  />
       </div>
       <Switch>
@@ -123,7 +131,7 @@ function App() {
           />
         </Route>
         <Route path='/reviews'>
-          <ReviewContainer reviews={newReviewArray} />
+          <ReviewContainer deleteReview={deleteReview} reviews={newReviewArray} />
         </Route>
         <Route path='/add-review'>
           <AddReview addReview={addReview}/>
