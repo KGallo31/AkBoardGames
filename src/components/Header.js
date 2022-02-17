@@ -10,7 +10,9 @@ import { Link } from 'react-router-dom'
 function Header() {
   return (
     <div class="center">
-      <img src="https://res.cloudinary.com/april-skrine/image/upload/v1645034174/newlogo_1_wjqh1k.jpg"/>
+      <Link to={`/`}>
+        <img src="https://res.cloudinary.com/april-skrine/image/upload/v1645034174/newlogo_1_wjqh1k.jpg" alt="logo"/>
+      </Link>
       <div>
         <Link to={`/add-review`}><img src="https://res.cloudinary.com/april-skrine/image/upload/v1645035924/buttonback__1_-removebg-preview_ad3zbu.png" alt="add-review"/></Link> 
       </div> 

@@ -29,8 +29,18 @@ code {
 	-o-background-size: cover;
 	background-size: cover;
 	margin-top: -60px;
+  padding-bottom: 200px;
 }
 
 .header {
 	padding-top: 50px;
+}
+
+.border {
+  padding-right: 10px;
+}
+
+.button-click {
+  color: #C1BBDA !important;
+  background: black !important;
 }
