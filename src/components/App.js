@@ -17,8 +17,6 @@ function App() {
 
   const [gameList,setGameList] = useState([])
 
-  const [sortAlphabetical,setSortAlphabetical] = useState(true)
-
   const [reviews, setReviews] = useState([])
 
   const [selectedGame, setSelectedGame] = useState('')

@@ -7,11 +7,13 @@ function ReviewContainer({reviews,deleteReview}) {
 
 
   return (
-        <div>
-          <Card.Group itemsPerRow={4}>
+    <div className="ui center aligned container">
+        <div className="center-div">
+          <Card.Group itemsPerRow={3}>
             {reviews.map((review) => <Review deleteReview={deleteReview} review={review} key={review.id}/>)}
           </Card.Group>
         </div>
+    </div>
   )
 }
 

@@ -8,7 +8,7 @@ function Game({game, changeFilteredReviews}) {
   const extra = <Link to={`/reviews`}><Button onClick={() => changeFilteredReviews(game.name)}>Show Reviews</Button></Link>
 
   return (
-    <Card 
+    <Card style={{border: '5px solid #C1BBDA'}} 
     image={game.imgUrl}
     header={game.name}
     meta={players}

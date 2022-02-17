@@ -28,27 +28,29 @@ function AddReview({addReview}) {
 
     return(
       <div className="ui center aligned container">
+        <div className="center-div">
           <form onSubmit={onSubmit} className="ui form">
               <div className="field">
-                <label>Name</label>
+                <label style={{color: '#C1BBDA', fontSize: '20px'}}>NAME</label>
                 <input onChange={(e) => setReviewName(e.target.value)} type="text" name="name" placeholder="Name"/>
               </div>
               <div className="field">
-                <label>Game</label>
+                <label style={{color: '#C1BBDA', fontSize: '20px'}}>GAME</label>
                 <input onChange={(e) => setReviewGame(e.target.value)}  type="text" name="game-name" placeholder="Game"/>
               </div>
               <div className="field">
-                <label>Rating</label>
-                <input onChange={(e) => setReviewRating(e.target.value)} type="text" name="rating" placeholder="Rating"/>
+                <label style={{color: '#C1BBDA', fontSize: '20px'}}>RATING OUT OF 5</label>
+                <input onChange={(e) => setReviewRating(e.target.value)} type="number" name="rating" placeholder="Rating"/>
               </div>
               <div className="field">
-                <label>Review</label>
+                <label style={{color: '#C1BBDA', fontSize: '20px'}}>REVIEW</label>
                 <input onChange={(e) => setUserReview(e.target.value)} type="text" name="review" placeholder="Review"/>
               </div>
-            <button className="ui button" type="submit">Submit</button>
+            <button style={{border: '5px solid #C1BBDA', background:'white', color:'black'}} className="ui button" type="submit">Submit</button>
           </form>
         <Space></Space>
         <Space></Space>
+        </div>
       </div>
     )
 }

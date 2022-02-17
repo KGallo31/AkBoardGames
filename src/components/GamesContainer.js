@@ -2,8 +2,8 @@ import React from 'react'
 import Game from './Game'
 import {Card, Button} from 'semantic-ui-react'
 import Filter from './Filter'
-import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import styled from 'styled-components'
 
 const Space = styled.p`
   margin-top:40px;
@@ -22,7 +22,7 @@ function GamesContainer({changeSortAlphabetical,gameList,changeSearchBy,changeSe
         {gameList.map(game => <Game key={game.id} game={game} changeFilteredReviews={changeFilteredReviews}/>)}
       </Card.Group>
       <Space></Space>
-      <Link to={`/add-game`}><Button>ADD A GAME</Button></Link>
+      <Link to={`/add-game`}><Button style={{border: '5px solid #C1BBDA', background:'white', color:'black', fontSize: '30px'}}>ADD A GAME</Button></Link>
     </div>
   )
 }

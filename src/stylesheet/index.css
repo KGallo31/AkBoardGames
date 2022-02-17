@@ -44,3 +44,11 @@ code {
   color: #C1BBDA !important;
   background: black !important;
 }
+
+.center-div {
+  margin: auto;
+  width: 80%;
+  border: 0px solid white;
+  padding: 10px;
+
+}

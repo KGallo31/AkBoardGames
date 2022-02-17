@@ -21,14 +21,16 @@ function Filter({changeSearchBy,changeSearchByNumPlayer,changeSortAlphabetical})
     <div className="ui huge icon input">
       <div className="border"><Input icon={'search'} onChange={changeSearchBy} type={'text'}/></div>
       <div className="border">
-        <Button className={toggle ? '' : 'button-click'}
+        <Button style={{border: '5px solid #C1BBDA', background:'white', color:'black'}}
+          className={toggle ? '' : 'button-click'}
           onClick={() => {changeSearchByNumPlayer()
           changeToggle()}}> 
           {toggle ? 'Sort By Minimum Number Of Players': "SORTED BY PLAYER NUMBER"}
         </Button>
       </div>
       <div className="border">
-        <Button className={toggle2 ? '' : 'button-click'}
+        <Button style={{border: '5px solid #C1BBDA', background:'white', color:'black'}}
+        className={toggle2 ? '' : 'button-click'}
           onClick={() => {changeSortAlphabetical()
           changeToggle2()}}> {toggle2 ? 'Sort By Alphabetical Order' :'SORTED ALPHABETICALLY' }
         </Button>
