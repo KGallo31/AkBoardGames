@@ -7,12 +7,12 @@ const Space = styled.p`
   margin-bottom:20px
 `;
 
-function Header({changeReviewState}) {
+function Header({setReviewState}) {
   return (
     <div className="center">
       <Link to={`/`}>
         <img 
-          onClick={changeReviewState} 
+          onClick={() => setReviewState(true)} 
           src="https://res.cloudinary.com/april-skrine/image/upload/v1645034174/newlogo_1_wjqh1k.jpg" 
           alt="logo"
         />

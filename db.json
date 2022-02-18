@@ -230,6 +230,13 @@
       "rating": "5",
       "review": "Kevin always loses which is cool",
       "id": 7
+    },
+    {
+      "name": "Dalton",
+      "game": "Splendor",
+      "rating": "1",
+      "review": "I hate this game because I always lose.",
+      "id": 8
     }
   ]
 }

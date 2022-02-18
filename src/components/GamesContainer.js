@@ -22,7 +22,7 @@ function GamesContainer({changeSortAlphabetical,gameList,changeSearchBy,changeSe
         {gameList.map(game => <Game key={game.id} game={game} changeFilteredReviews={changeFilteredReviews} changeReviewState={changeReviewState}/>)}
       </Card.Group>
       <Space></Space>
-      <Link to={`/add-game`}><Button style={{border: '5px solid #C1BBDA', background:'white', color:'black', fontSize: '30px'}}>ADD A GAME</Button></Link>
+      <Link to={`/add-game`}><Button style={{border: '5px solid #C1BBDA', background:'white', color:'black', fontSize: '40px', fontFamily: 'Great Vibes'}}>ADD A GAME</Button></Link>
     </div>
   )
 }
